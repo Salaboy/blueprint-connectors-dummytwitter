@@ -11,6 +11,17 @@
     <activiti.cloud.version>7-201802-EA</activiti.cloud.version>
     <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
   </properties>
+	<dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.activiti.cloud</groupId>
+        <artifactId>activiti-cloud-dependencies</artifactId>
+        <version>${activiti.cloud.version}</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>org.activiti.cloud</groupId>

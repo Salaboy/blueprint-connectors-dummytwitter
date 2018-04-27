@@ -17,7 +17,7 @@ spec:
       - name: {{ .Chart.Name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         env:
-          - name: {{ .Chart.javaOpts }}
+          - name: {{ default "JAVA_OPTS" .Values.javaOptsVariable }}
             value: {{ .Values.container.javaOpts }} 
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:

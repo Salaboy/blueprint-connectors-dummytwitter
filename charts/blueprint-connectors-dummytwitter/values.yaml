@@ -6,7 +6,7 @@ javaOptsVariable: JAVA_OPTS
 variables:
   rabbitmq:
     name: ACT_RABBITMQ_HOST
-    value: jx-staging-rabbitmq-0 
+    value: jx-staging-rabbitmq 
 container:
   javaOpts: -Xmx512m -Xms512m
 image:

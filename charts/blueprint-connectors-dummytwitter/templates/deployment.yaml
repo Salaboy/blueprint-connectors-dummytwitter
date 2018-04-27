@@ -21,6 +21,10 @@ spec:
             value: {{ .Values.container.javaOpts }} 
             name: {{ default "ACT_RABBITMQ_HOST" .Values.variables.rabbitmq.name }}
             value: {{ default "rabbitmq" .Values.variables.rabbitmq.value }}
+            name: {{ default "SPRING_RABBITMQ_USERNAME" .Values.variables.rabbitmq.username.name }}
+            value: {{ default "user" .Values.variables.rabbitmq.username.value }}
+            name: {{ default "SPRING_RABBITMQ_PASSWORD" .Values.variables.rabbitmq.password.name }}
+            value: {{ defaut "password" .Values.variables.rabbitmq.password.value }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
         - containerPort: {{ .Values.service.internalPort }}

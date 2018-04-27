@@ -5,8 +5,8 @@ replicaCount: 1
 javaOptsVariable: JAVA_OPTS
 variables:
   rabbitmq:
-    name: ACT_RABBITMQ_HOST
-    value: jx-staging-rabbitmq 
+    host:
+      value: jx-staging-rabbitmq 
     password:
       value: slVB5aO380 
 container:

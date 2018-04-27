@@ -6,9 +6,14 @@ javaOptsVariable: JAVA_OPTS
 variables:
   rabbitmq:
     host:
-      value: jx-staging-rabbitmq 
+      name: ACT_RABBITMQ_HOST
+      value: jx-staging-rabbitmq
+    username:
+      name: SPRING_RABBITMQ_USERNAME
+      value: user
     password:
-      value: slVB5aO380 
+      name: SPRING_RABBITMQ_PASSWORD
+      value: slVB5aO380
 container:
   javaOpts: -Xmx512m -Xms512m
 image:

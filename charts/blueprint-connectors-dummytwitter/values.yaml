@@ -10,8 +10,8 @@ variables:
 container:
   javaOpts: -Xmx512m -Xms512m
 image:
-  repository: draft
-  tag: dev
+  repository: 100.64.31.229:5000/jenkinsx/blueprint-connectors-dummytwitter
+  tag: 1.0.7
   pullPolicy: IfNotPresent
 service:
   name: blueprint-connectors-dummytwitter

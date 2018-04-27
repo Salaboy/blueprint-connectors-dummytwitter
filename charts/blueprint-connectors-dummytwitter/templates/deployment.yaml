@@ -20,7 +20,7 @@ spec:
           - name: {{ default "JAVA_OPTS" .Values.javaOptsVariable }}
             value: {{ .Values.container.javaOpts }} 
             name: {{ default "ACT_RABBITMQ_HOST" .Values.variables.rabbitmq.name }}
-            value {{ default "rabbitmq" .Values.variables.rabbitmq.value }}
+            value: {{ default "rabbitmq" .Values.variables.rabbitmq.value }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
         - containerPort: {{ .Values.service.internalPort }}

@@ -17,16 +17,16 @@ spec:
       - name: {{ .Chart.Name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         env:
-          - name: {{ default "JAVA_OPTS" .Values.javaOptsVariable }}
-            value: {{ .Values.container.javaOpts }}
-            name: SPRING_RABBITMQ_HOST
-            value: {{ default "rabbitmq" .Values.variables.rabbitmq.host.value }}
-            name: ACT_RABBITMQ_HOST
-            value: {{ default "rabbitmq" .Values.variables.rabbitmq.host.value }}
-            name: {{ default "SPRING_RABBITMQ_USERNAME" .Values.variables.rabbitmq.username.name }}
-            value: {{ default "user" .Values.variables.rabbitmq.username.value }}
-            name: {{ default "SPRING_RABBITMQ_PASSWORD" .Values.variables.rabbitmq.password.name }}
-            value: {{ default "password" .Values.variables.rabbitmq.password.value }}
+        - name: {{ default "JAVA_OPTS" .Values.javaOptsVariable }}
+          value: {{ .Values.container.javaOpts }}
+        - name: SPRING_RABBITMQ_HOST
+          value: {{ default "rabbitmq" .Values.variables.rabbitmq.host.value }}
+        - name: ACT_RABBITMQ_HOST
+          value: {{ default "rabbitmq" .Values.variables.rabbitmq.host.value }}
+        - name: {{ default "SPRING_RABBITMQ_USERNAME" .Values.variables.rabbitmq.username.name }}
+          value: {{ default "user" .Values.variables.rabbitmq.username.value }}
+        - name: {{ default "SPRING_RABBITMQ_PASSWORD" .Values.variables.rabbitmq.password.name }}
+          value: {{ default "password" .Values.variables.rabbitmq.password.value }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
         - containerPort: {{ .Values.service.internalPort }}

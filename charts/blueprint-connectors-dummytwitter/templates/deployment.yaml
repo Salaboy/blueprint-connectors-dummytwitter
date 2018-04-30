@@ -19,6 +19,8 @@ spec:
         env:
           - name: {{ default "JAVA_OPTS" .Values.javaOptsVariable }}
             value: {{ .Values.container.javaOpts }}
+            name: SPRING_RABBITMQ_HOST
+            value: {{ default "rabbitmq" .Values.variables.rabbitmq.host.value }}
             name: ACT_RABBITMQ_HOST
             value: {{ default "rabbitmq" .Values.variables.rabbitmq.host.value }}
             name: {{ default "SPRING_RABBITMQ_USERNAME" .Values.variables.rabbitmq.username.name }}

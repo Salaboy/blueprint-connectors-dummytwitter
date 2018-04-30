@@ -6,7 +6,6 @@ javaOptsVariable: JAVA_OPTS
 variables:
   rabbitmq:
     host:
-      name: ACT_RABBITMQ_HOST 
       value: jx-staging-rabbitmq
     username:
       name: SPRING_RABBITMQ_USERNAME

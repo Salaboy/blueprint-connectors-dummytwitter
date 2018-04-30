@@ -18,8 +18,8 @@ spec:
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         env:
           - name: {{ default "JAVA_OPTS" .Values.javaOptsVariable }}
-            value: {{ .Values.container.javaOpts }} 
-            name: {{ default "ACT_RABBITMQ_HOST" .Values.variables.rabbitmq.host.name }}
+            value: {{ .Values.container.javaOpts }}
+            name: ACT_RABBITMQ_HOST
             value: {{ default "rabbitmq" .Values.variables.rabbitmq.host.value }}
             name: {{ default "SPRING_RABBITMQ_USERNAME" .Values.variables.rabbitmq.username.name }}
             value: {{ default "user" .Values.variables.rabbitmq.username.value }}
